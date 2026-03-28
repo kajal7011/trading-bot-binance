@@ -1,0 +1,5 @@
+2026-03-28 12:01:07,969 - INFO - Job started
+2026-03-28 12:01:07,971 - INFO - Config loaded: {'seed': 42, 'window': 5, 'version': 'v1'}
+2026-03-28 12:01:07,975 - INFO - Rows loaded: 7
+2026-03-28 12:01:07,979 - INFO - Processing completed
+2026-03-28 12:01:07,982 - INFO - Job completed successfully
