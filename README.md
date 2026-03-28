@@ -1,61 +1,57 @@
-# MLOps Batch Processing Task
+# Binance Trading Bot 🚀
 
-## Overview
+## 📌 Overview
 
-This project implements a minimal MLOps-style batch pipeline in Python.
+This project is a Python-based trading bot that interacts with Binance API to place and manage orders.
 
-It:
+## ⚙️ Features
 
-* Loads configuration from YAML
-* Reads OHLCV data from CSV
-* Computes rolling mean on closing price
-* Generates binary trading signals
-* Outputs structured metrics and logs
+* Connects to Binance API
+* Places buy/sell orders
+* Logging and validation system
+* Configurable using YAML
 
----
-
-## Features
-
-* Reproducibility via config + seed
-* Observability using logs and metrics
-* Deployment-ready with Docker
-
----
-
-## Run Locally
-
-```bash
-python run.py --input data.csv --config config.yaml --output metrics.json --log-file run.log
-```
-
----
-
-## Docker Usage
-
-```bash
-docker build -t mlops-task .
-docker run --rm mlops-task
-```
-
----
-
-## Output Files
-
-* `metrics.json` → contains processing metrics
-* `run.log` → contains execution logs
-
----
-
-## Project Structure
+## 📂 Project Structure
 
 ```
-mlops-task/
-├── run.py
-├── config.yaml
-├── data.csv
-├── requirements.txt
-├── Dockerfile
-├── metrics.json
-├── run.log
+trading_bot/
+│── bot/
+│   ├── client.py
+│   ├── orders.py
+│   ├── validators.py
+│   └── logging_config.py
+│
+│── cli.py
+│── config.yaml
+│── Dockerfile
+│── README.md
 ```
+
+## ▶️ Run Locally
+
+```
+python cli.py
+```
+
+## 🔐 Environment Variables
+
+Create a `.env` file:
+
+```
+API_KEY=your_key
+API_SECRET=your_secret
+```
+
+## 🐳 Docker Usage
+
+```
+docker build -t trading-bot .
+docker run trading-bot
+```
+
+## 📊 Notes
+
+* This bot is for educational purposes
+* Use testnet before real trading
+
 
